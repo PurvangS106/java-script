@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="trophy.png">
+    <style>
+        fieldset
+        {
+            margin: auto;
+            width: 50%;
+            background-color: lightcyan;
+        }
+        td
+        {
+            width: 55%;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend><h1>Assessment Form</h1></legend>
+        <form action=""  onsubmit="return fill()">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="fname" placeholder="Enter Your First Name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lname" placeholder="Enter Your Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" id="mail" placeholder="Enter Your Email Address"></td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><input type="text" id="mobile" placeholder="Only 10 Digits Are Allowed"> </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="sex" value="">Male
+                        <input type="radio" name="sex" value="">Female
+                        <input type="radio" name="sex" value="" checked>Others
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" id="dob"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="" id="address" cols="25" rows="10" placeholder="Enter Your Address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" id="city" placeholder="Enter City"></td>
+                </tr>
+                <tr>
+                    <td>Area Pin</td>
+                    <td><input type="text" id="pin" placeholder="Enter Area Pincode"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input type="text" id="state" placeholder="Enter State"></td>
+                </tr>
+                <tr>
+                    <td>Qualifications</td>
+                    <td><select name="" id="Qualification" >
+                            <option value="" disabled selected hidden>Select Qualifications</option>
+                            <option value="">B.Com.</option>
+                            <option value="">M.Com.</option>
+                            <option value="">B.B.A.</option>
+                            <option value="">M.B.A.</option>
+                            <option value="">B.C.A.</option>
+                            <option value="">M.C.A.</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Specialization</td>
+                    <td><input type="checkbox">Computer Science <br>
+                        <input type="checkbox">Information Technology <br>
+                        <input type="checkbox">Computer Architecture <br>
+                        <input type="checkbox">Tele Communication <br>
+                        <input type="checkbox" checked>Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="pwd" placeholder="Enter Your Password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top:30px;"><input type="submit" value="Register" style="background-color: cyan;border: none;box-shadow: 1px 1px 5px black;"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
+
+<script src="assessment.js"></script>
