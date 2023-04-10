@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Password :</td>
+            <td><input type="text" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password :</td>
+            <td><input type="password" id="cfmpwd"> <input type="checkbox" id="chbox" onclick="hello()"></td>
+        </tr>
+        <tr>
+            <td><span id="doit"></span></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" id="btn" onclick="hey()"></td>
+        </tr>
+    </table>     
+</body>
+<script>
+    function hello(){
+            var a=document.getElementById("cfmpwd");
+            // input type is a password so if we click on checkbox it will change the type from password to text.
+            if(a.type === "password"){
+                a.type = "text";
+            }
+            // on opposites it will change the type of text to password
+            else{
+                a.type = "password";
+            }
+        }
+</script>
+<script>
+    var span=document.getElementById("doit");
+    const hey=()=>{
+        let code = new Promise(function (resolve, reject) 
+        {
+            var a=document.getElementById("pwd");
+            var b=document.getElementById("cfmpwd");
+            if(a.value == b.value)
+            {
+                resolve("Mached");
+            }
+            else
+            {
+                reject("Something went wrong!!!");
+            }
+        });
+        code.then((resp)=> document.write(resp)).catch((err)=> document.write(err)); 
+    }
+</script>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Image Slider</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        .slide_content_1 {
+            width: 600px;
+            height: 250px;
+        }
+
+        .slide_content_2 {
+            width: 600px;
+            height: 250px;
+        }
+
+        .slide_content_3 {
+            width: 600px;
+            height: 250px;
+        }
+
+        .slider_rail {
+            position: relative;
+            height: 250px;
+            transition: 0.4s;
+        }
+
+        .slide_content {
+            float: left;
+        }
+
+        .slide_wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide_wrapper">
+            <ul class="slider_rail" id="slider_rail">
+                <li class="slide_content">
+                    <div class="slide_content_1"><img src="car1.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_2"><img src="car2.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_3"><img src="car3.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_1"><img src="car4.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_2"><img src="car5.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_3"><img src="car6.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_1"><img src="car7.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_2"><img src="car8.png" alt="" width="100%"></div>
+                </li>
+                <li class="slide_content">
+                    <div class="slide_content_3"><img src="car9.png" alt="" width="100%"></div>
+                </li>
+            </ul>
+        </div>
+        <button class="action_btn" id="prev">Prev</button>
+        <button class="action_btn" id="next">Next</button>
+    </div>
+    <script src="slider.js"></script>
+</body>
+
+</html>

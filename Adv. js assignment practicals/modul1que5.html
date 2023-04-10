@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+    </style>
+</head>
+Select your age : <input type="number" id="number1" value="0">
+<span id="smile"></span><br>
+<button id="btn" onclick="return checkage()">Check age</button>
+<body>
+    <script> 
+        function checkage(){
+            const age=document.getElementById("number1").value;
+            if(age > 18){
+                document.getElementById("smile").innerHTML ="You are eligible"
+                document.getElementById("smile").style.color = "green"
+                return true;
+            }
+            else{
+                var a=confirm("Did parents allows you?");
+                if(a==true){
+                    document.getElementById("smile").innerHTML ="You are eligible"
+                    document.getElementById("smile").style.color = "green"
+                    return true;
+
+                }
+                else{
+                    document.getElementById("smile").innerHTML ="You are not eligible"
+                    document.getElementById("smile").style.color = "red"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

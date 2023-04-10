@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- Styles -->
+    <title>Responsive Navbar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Alata', sans-serif;
+            background-color: rgb(67, 7, 7);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        /* Navbar */
+        nav {
+            background: #593f62;
+            box-shadow: 3px 0px 2px #c95858;
+            color: aliceblue;
+        }
+
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .nav-toggle {
+            color: tomato;
+            font-size: 2rem;
+            background: transparent;
+            border-color: transparent;
+            transition: all 0.3s linear;
+            cursor: pointer;
+        }
+
+        .nav-toggle:hover {
+            transform: rotate(90deg);
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .links a {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s linear;
+            color: antiquewhite;
+        }
+
+        .links a:hover {
+            background: rebeccapurple;
+            color: wheat;
+            padding-left: 1.5rem;
+        }
+
+        /* THE LOGIC */
+
+        /* First: Hide the show icon by default */
+        .social-icons {
+            display: none;
+        }
+
+        /* 2. Hide the links if it's height is not enough to accommodate. That's how html works, if it's height is not enough it won't show, so as the user reduces the size of the window it decreases the height of the parent of the link item but the problem is that if you don't give it overflow:hidden it will jump to next line so hidden:0 and overflow:hidden will hide an html parent container */
+
+        /* By default let's hide this */
+        .links {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s linear;
+        }
+
+        /* This is the class we will add to the links by js to show the links again because it has a height */
+        .show-links {
+            height: auto;
+            transition: all 0.3s linear;
+        }
+
+        /* Implementations */
+        @media screen and (min-width: 800px) {
+            .nav-center {
+                max-width: 1170px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+            }
+
+            .nav-header {
+                padding: 0;
+            }
+
+            /* Hide toggle on the large screen */
+            .nav-toggle {
+                display: none;
+            }
+
+            /* Give the links a height to show on a large screen */
+            .links {
+                height: auto;
+                display: flex;
+            }
+
+            .links a {
+                padding: 0;
+                margin: 0 0.5rem;
+                color: antiquewhite;
+            }
+
+            .links a:hover {
+                padding: 0;
+                background: transparent;
+                transform: rotate(10deg);
+                color: #493b2a;
+            }
+
+            /* Show the social icons on large screen */
+            .social-icons {
+                display: flex;
+            }
+
+            .social-icons a {
+                margin: 0 0.5rem;
+                color: wheat;
+                transition: all 0.3s linear;
+            }
+
+            .social-icons a:hover {
+                color: var(--clr-primary-7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <h2>Superman Pvt Ltd</h2>
+                <img src="https://w7.pngwing.com/pngs/56/779/png-transparent-superman-logo-clark-kent-general-zod-jor-el-superman-s-text-heart-logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="bi bi-border-width"></i>
+                </button>
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <!-- social media -->
+            <ul class="social-icons">
+                <li>
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-cart-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        // classList - shows/gets all classes
+        const navToggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.links');
+
+        // contains - checks classList for specific class
+        // add - add class
+        // remove - remove class
+        // toggle - toggles class
+
+        navToggle.addEventListener('click', () => {
+            //   console.log(links.classList);
+            //   console.log(links.classList.contains('links'));
+            //   if (links.classList.contains('show-links')) {
+            //     links.classList.remove('show-links');
+            //   } else {
+            //     links.classList.add('show-links');
+            //   }
+
+            //OR
+            links.classList.toggle('show-links');
+        });
+    </script>
+
+</body>
+
+</html>
