@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <style>
+        .hiddenspan {
+            display: none;
+        }
+
+        .img-currency {
+            height: 50px;
+        }
+        .sp_input{
+            border: none;
+            background-color: transparent;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="p-3 text-center">Cash Calculator</h1>
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/2000.jpg" alt="2000" class="img-fluid img-currency">
+                        <span class="span2000 hiddenspan">2000</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note2000"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total2000" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/500.jpg" alt="500" class="img-fluid img-currency">
+                        <span class="span500 hiddenspan">500</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note500"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total500" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/200.jpg" alt="200" class="img-fluid img-currency">
+                        <span class="span200 hiddenspan">200</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note200"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total200" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/100.png" alt="100" class="img-fluid img-currency">
+                        <span class="span100 hiddenspan">100</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note100"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total100" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/50.jpg" alt="50" class="img-fluid img-currency">
+                        <span class="span50 hiddenspan">50</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note50"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total50" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/20.jpg" alt="20" class="img-fluid img-currency">
+                        <span class="span20 hiddenspan">20</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note20"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total20" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/10.jpg" alt="10" class="img-fluid img-currency">
+                        <span class="span10 hiddenspan">10</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note10"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total10" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/5.jpg" alt="5" class="img-fluid img-currency">
+                        <span class="span5 hiddenspan">5</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note5"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total5" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/2.jpg" alt="2" class="img-fluid img-currency">
+                        <span class="span2 hiddenspan">2</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note2"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total2" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./assets/images/1.jpg" alt="1" class="img-fluid img-currency">
+                        <span class="span1 hiddenspan">1</span>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" class="form-control border-3 border-primary text-center" id="note1"
+                            placeholder="0" />
+                    </div>
+                    <div class="col-3 text-center">=</div>
+                    <div class="col-3">
+                        <p class="alert alert-primary p-2 text-center" id="total1" class="input-group-text">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 alert alert-primary p-2 text-center">Total Cash :</div>
+            <div class="col-9 alert alert-primary p-2 text-center"><input type="number" class="p-0 sp_input" id="totalcount" readonly value="0"/></div>
+            <div class="col-3 alert alert-primary p-2 text-center">Total Notes :</div>
+            <div class="col-9 alert alert-primary p-2 text-center"><input type="number" class="p-0 sp_input" id="totalnotes" readonly value="0"/></div>
+            <div class="col-3 alert alert-primary p-2 text-center">In Text :</div>
+            <div class="col-9 alert alert-primary p-2 text-center"><span class="word p-0" id="wordrupee" ></span></div>
+        </div>
+    </div>
+</body>
+<script src="calc.js"></script>
+</html>
