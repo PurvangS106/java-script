@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1" onclick="bTod()">Binary to Decimal</button>
+    <button id="btn2" onclick="dTob()">Decimal to Binary</button>
+    <br>
+    <script>
+        function bTod() {
+            let binery = prompt('Enter Binery Number to get its Decimal Number');
+            let decimal = parseInt(binery, 2);
+            document.write('The Decimal Number of Binery <b>' + binery + '</b> is <b>' + decimal + '</b><br>');
+        }
+
+        function dTob() {
+            let decimal1 = prompt('Enter Decimal Number to get its Binery Number');
+            let binery1 = (decimal1 >>> 0).toString(2);
+            document.write('The Binery Number of Decimal <b>' + decimal1 + '</b> is <b>' + binery1 + '</b><br>');
+
+        }
+    </script>
+</body>
+
+</html>

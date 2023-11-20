@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = prompt('Enter Your Name');
+        const abbrName = name.trim().split(' ');
+        console.log(abbrName);
+        if (abbrName.length > 1) {
+            alert(abbrName[0] + ' ' + abbrName[1].charAt(0) + '.');
+        }
+        else {
+            alert(abbrName[0]);
+        }
+    </script>
+</body>
+
+</html>

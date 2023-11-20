@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const num = prompt('Enter a number');
+        nLength = num.length;
+
+        // Armstrong number using While loop
+        let i = 0, sum = 0;
+        while (i < nLength) {
+            let digit = num[i] - '0';
+            sum = (sum + Math.pow(digit, nLength));
+            i++;
+        }
+        if (sum == num) {
+            alert(num + ' is an armstrong number.');
+        }
+        else {
+            alert(num + ' is not an armstrong number.');
+        }
+
+        // // Armstrong number using For loop
+        // let sum = 0;
+        // for (let i = 0; i < nLength; i++) {
+        //     let digit = num[i] - '0';
+        //     sum = (sum + Math.pow(digit, nLength));
+        // }
+        // if (sum == num) {
+        //     alert(num + ' is an armstrong number.');
+        // }
+        // else {
+        //     alert(num + ' is not an armstrong number.');
+        // }
+
+    </script>
+</body>
+
+</html>
