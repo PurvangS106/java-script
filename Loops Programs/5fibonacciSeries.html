@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const num = parseInt(prompt('Enter a number'));
+        let n1 = 0, n2 = 1, nextterm;
+        nextterm = n1 + n2;
+        do {
+            document.write(nextterm + '<br>');
+            n1 = n2;
+            n2 = nextterm;
+            nextterm = n1 + n2;
+        }
+        while (nextterm <= num);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 1, 2, 7, 7];
+        function removeDuplicate(arr) {
+            let newArray = [];
+            for (i = 0; i < arr.length; i++) {
+                if (newArray.indexOf(arr[i]) === -1) {
+                    newArray.push(arr[i]);
+                }
+            }
+            return newArray;
+        }
+        document.write(removeDuplicate(arr) + '<br>')
+    </script>
+
+    <!-- Remove Duplicate using filter() method  -->
+    <script>
+        let arr1 = [1, 2, 3, 4, 5, 6, 1, 2];
+        function removeDuplicate(arr1) {
+            return arr1.filter((item, index) => arr1.indexOf(item) === index);
+        }
+        document.write(removeDuplicate(arr1) + '<br>')
+    </script>
+
+    <!-- Remove Duplicate using Set() method  -->
+    <script>
+        let arr2 = [1, 2, 3, 4, 5, 6, 1, 2];
+        function removeDuplicate(arr12) {
+            return [...new Set(arr2)];
+        }
+        document.write(removeDuplicate(arr2) + '<br>')
+    </script>
+
+    <!-- Remove Duplicate using foreach method  -->
+    <script>
+        let arr3 = [1, 2, 3, 4, 5, 6, 1, 2];
+        function removeDuplicate(arr12) {
+            let newArr = []
+            arr3.forEach(element => {
+                if (!newArr.includes(element)) {
+                    newArr.push(element);
+                }
+            });
+            return newArr;
+        }
+        document.write(removeDuplicate(arr3) + '<br>')
+    </script>
+</body>
+
+</html>

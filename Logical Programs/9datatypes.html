@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.String
+        let name = 'Purvang';
+        console.log(name, typeof name);
+
+        // 2.Symbol
+        let symbolicName = Symbol('Purvang');
+        console.log(symbolicName, typeof symbolicName);
+
+        // 3.Number
+        let number = 7;
+        console.log(number, typeof number);
+
+        // 4.Null
+        let num = null;
+        console.log(num, typeof num);
+
+        // 5.Boolean
+        let x = 2, y = 2, z = 3;
+        console.log(x == y, typeof (x == y));  //true
+        console.log(x == z, typeof (x == z));  //false
+
+        // 6.BigInt
+        let toomuchnum = BigInt(123654789687456321123654789);
+        console.log(toomuchnum, typeof toomuchnum);
+
+        // 7.Undefined
+        let undefinedName;
+        console.log(undefinedName, typeof undefinedName);
+
+        // 8.Object     //Object contains three data types
+        // i.Object
+        let obj = { id: '1', name: 'Purvang' };
+        console.log(obj, typeof obj);
+
+        // ii.Array
+        let ary = ['Purvang', 2, 'Parth', 'Pakul'];
+        console.log(ary, typeof ary);
+
+        // iii.Date
+        let date = new Date();
+        console.log(date, typeof date);
+    </script>
+</body>
+
+</html>

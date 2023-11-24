@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const input = prompt('Enter a number or uppercase or lowercase letter');
+        const charvalue = input.charCodeAt(0);
+        if (charvalue >= 48 && charvalue <= 57) {
+            alert('Character is Number.')
+        }
+        else if (charvalue >= 65 && charvalue <= 90) {
+            alert('Character is Uppercase.')
+        }
+        else if (charvalue >= 97 && charvalue <= 122) {
+            alert('Character is Lowercase.')
+        }
+        else {
+            alert('Character is Special Character')
+        }
+
+    </script>
+</body>
+
+</html>

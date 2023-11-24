@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const char = prompt('Enter a single word to check whether it is Vowel or not');
+        const chararr = char.trim().split(' ');
+        console.log(chararr.length, typeof chararr);
+
+        if (chararr == '') {
+            alert('Please enter atleast one word');
+        }
+        else if (chararr.length == 1) {
+            const arr = char.toLowerCase().trim();
+            console.log(arr[0]);
+            if (arr[0] == 'a' || arr[0] == 'e' || arr[0] == 'i' || arr[0] == 'o' || arr[0] == 'u') {
+                alert('It is Vowel');
+            }
+            else {
+                alert('It is Consonant');
+            }
+        }
+        else {
+            alert('Please enter only one word');
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

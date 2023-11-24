@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const perc = parseFloat(prompt('Enter the obtained percentage.'));
+        console.log(perc);
+        switch (true) {
+            case (perc >= 90):
+                alert('Your have obtained A Grade.');
+                break;
+            case (perc >= 80 && perc < 90):
+                alert('Your have obtained B Grade.');
+                break;
+            case (perc >= 70 && perc < 80):
+                alert('Your have obtained C Grade.');
+                break;
+            case (perc >= 60 && perc < 70):
+                alert('Your have obtained D Grade.');
+                break;
+            case (perc >= 45 && perc < 60):
+                alert('Your have obtained E Grade.');
+                break;
+            case (perc >= 35 && perc < 45):
+                alert('Your have obtained F Grade.');
+                break;
+            default:
+                alert('Your are failed.');
+                break;
+        }
+    </script>
+</body>
+
+</html>

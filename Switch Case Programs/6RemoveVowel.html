@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const str = prompt('Enter string charcater');
+        const alpha = str.replace(/[0-9]/g, '');
+        let removedWords;
+        console.log(alpha.length)
+        switch (true) {
+            case (str.includes('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U')):
+                removedWords = alpha.replace('a', '').replace('e', '').replace('i', '').replace('o', '').replace('u', '').replace('A', '').replace('E', '').replace('I', '').replace('O', '').replace('U', '');
+                console.log(removedWords);
+                break;
+        }
+    </script>
+</body>
+
+</html>

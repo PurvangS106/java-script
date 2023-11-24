@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt('Enter Value to change its uppercase.');
+        let swapcase = (str) => {
+            return str.replace(/([a-z]+)|([A-Z]+)/g, function (match, chr) {
+                return chr ? match.toUpperCase() : match.toLowerCase();
+            });
+        }
+        document.write(swapcase(str));
+
+    </script>
+</body>
+
+</html>

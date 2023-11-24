@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1" onclick="oTod()">Octal to Decimal</button>
+    <button id="btn2" onclick="dToo()">Decimal to Octal</button>
+    <br>
+    <script>
+
+        function oTod() {
+            var oct = prompt('Enter Octal Number to Convert into Decimal Number');
+            var dec = parseInt(oct, 8);
+            document.write("dec = " + dec + "<br>");
+        }
+
+        function dToo() {
+            var dec1 = prompt('Enter Decimal Number to Convert into OCtal Number') * 1;
+            document.write("Oct = " + dec1.toString(8) + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

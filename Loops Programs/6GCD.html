@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const x = parseInt(prompt('Enter 1st number'));
+        const y = parseInt(prompt('Enter 2nd number'));
+        function gcd_two_numbers(x, y) {
+            while (y) {
+                var t = y;
+                y = x % y;
+                x = t;
+            }
+            return x;
+        }
+        alert(`GCD of ${x} & ${y} is ` + gcd_two_numbers(x, y) + '.');
+    </script>
+</body>
+
+</html>

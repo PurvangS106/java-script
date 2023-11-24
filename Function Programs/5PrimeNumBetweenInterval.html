@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 1;
+        let b = 20;
+        for (let i = a; i <= b; i++) {
+            let reminder = 0;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    reminder = 1;
+                    break;
+                }
+            }
+            if (i > 1 && reminder == 0) {
+                document.write(i + '<br>');
+            }
+        }
+    </script>
+</body>
+
+</html>

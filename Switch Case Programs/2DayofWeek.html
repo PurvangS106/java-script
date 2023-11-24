@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="numberofday" max="1">
+    <button id="btn">Click Here to Know Day.</button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.onclick = () => {
+            let day = document.getElementById('numberofday').value;
+            switch (day) {
+                case '1':
+                    alert("It is Monday.");
+                    break;
+                case '2':
+                    alert("It is Tuesday.");
+                    break;
+                case '3':
+                    alert("It is Wednesday.");
+                    break;
+                case '4':
+                    alert("It is Thursday.");
+                    break;
+                case '5':
+                    alert("It is Friday.");
+                    break;
+                case '6':
+                    alert("It is Saterday.");
+                    break;
+                case '7':
+                    alert("It is Sunday.");
+                    break;
+                default:
+                    alert('Wrong Input.');
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

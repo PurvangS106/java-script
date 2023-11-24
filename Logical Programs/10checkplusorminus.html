@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const num = prompt('Enter number to check wheather it is positive or negative');
+        const checkednum = Math.sign(num);
+        let sign;
+        if (checkednum == '1') {
+            sign = 'Positive';
+        }
+        else if (checkednum == '-1') {
+            sign = 'Negative';
+        }
+        else {
+            sign = 'Zero';
+        }
+        alert('Number ' + num + ' is ' + sign + '.');
+    </script>
+</body>
+
+</html>

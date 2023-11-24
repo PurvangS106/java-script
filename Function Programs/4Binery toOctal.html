@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn2" onclick="bToo()">Binery to Octal</button>
+    <button id="btn1" onclick="oTob()">Octal to Binery</button>
+    <br>
+    <script>
+
+        function bToo() {
+            let bin = prompt('Enter Decimal Number to Convert into OCtal Number');
+            let oct = parseInt(bin, 2).toString(8);
+            document.write("Octal = " + oct + "<br>");
+            console.log(parseInt(bin, 2));
+        }
+
+        function oTob() {
+            let oct1 = prompt('Enter Octal Number to Convert into Decimal Number');
+            let bin1 = (parseInt(oct1, 8) >>> 0).toString(2);
+            document.write("Binery = " + bin1 + "<br>");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const BasicSalary = prompt('Enter Basic Salary');
+        const Grade = prompt('Enter Grade');
+
+        let HRA, DA, PF, Allowance;
+        HRA = BasicSalary * 0.2;
+        DA = BasicSalary * 0.5;
+        PF = BasicSalary * 0.11;
+        if (Grade == 'a') {
+            Allowance = 5000;
+        }
+        else if (Grade == 'b') {
+            Allowance = 3000;
+        }
+        else if (Grade == 'c') {
+            Allowance = 1000;
+        }
+        else {
+            Allowance = 500;
+        }
+
+        let grossSalary = (+BasicSalary + +HRA + +DA + +Allowance - +PF);
+        alert(grossSalary);
+
+    </script>
+</body>
+
+</html>

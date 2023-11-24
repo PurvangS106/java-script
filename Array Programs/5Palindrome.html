@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt('Enter Number');
+
+        let len = num.length;
+        function palindromeNum(num) {
+            for (let i = 0; i <= len / 2; i++) {
+                if (num[i] !== num[len - 1 - i]) {
+                    return document.write('It is not a Palindrome Number');
+                }
+            }
+            return document.write('It is a Palindrome Number');
+        }
+        palindromeNum(num);
+    </script>
+</body>
+
+</html>

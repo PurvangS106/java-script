@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+    <input type="number" name="" id="number" placeholder="Enter Value">
+    <input type="text" name="" id="option" value="" placeholder="Write c or f to convert" max="1">
+    <button onclick="ctof()">Convert</button>
+    <script>
+        let count = document.getElementById('number');
+        let temp = document.getElementById('option');
+        function ctof() {
+            // console.log(temp.value);
+            switch (temp.value) {
+                case 'c':
+                    let F = (count.value * (9 / 5)) + 32;
+                    alert(count.value + ' Celsius is equals to ' + F + ' Fahrenhit.');
+                    break;
+                case 'f':
+                    let C = (count.value - 32) * (5 / 9);
+                    alert(count.value + ' Fahrenhit is equals to ' + C + ' Celsius.');
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

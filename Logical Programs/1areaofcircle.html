@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" name="" id="number">
+    <button id="btn" onclick="onclickme()">Click</button>
+    <p id="textarea"></p>
+    <!-- <script>
+        let number = document.getElementById('number');
+
+        let btn = document.getElementById('btn');
+
+        btn.onclick = () => {
+            let area = Math.PI * number.value * number.value;
+            document.getElementById('textarea').innerHTML = 'Area of Circle is : ' + area;
+        }
+    </script> -->
+
+    <script>
+        let num = document.getElementById('number').value;
+        console.log(num)
+        // let num = 20;
+        const pi = Math.PI;
+        const onclickme = () => {
+            const areaofCircle = (number, pi) => {
+                return pi * number * number;
+            }
+            console.log(areaofCircle(num, pi));
+            areaofCircle(num, pi);
+        }
+    </script>
+
+</body>
+
+</html>

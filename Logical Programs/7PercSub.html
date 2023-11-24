@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 50%;
+            margin: auto;
+        }
+
+        .inputs {
+            width: 100%;
+        }
+
+        .inputs h1 {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend style="text-align: center;">
+            <h1>Student Data</h1>
+        </legend>
+        Gujarati : <br>
+        <input type="number" id="gujarati" class="inputs"> <br> <br>
+        English : <br>
+        <input type="number" id="english" class="inputs"> <br> <br>
+        Hindi : <br>
+        <input type="number" id="hindi" class="inputs"> <br> <br>
+        Social Science : <br>
+        <input type="number" id="ss" class="inputs"> <br> <br>
+        Science : <br>
+        <input type="number" id="science" class="inputs"> <br> <br>
+        <button class="inputs" onclick="results()"
+            style="background-color: blue;color: white; padding: 5px 0;">Submit</button>
+
+        <p id="totals"></p>
+        <p id="percentage"></p>
+        <p id="grade"></p>
+    </fieldset>
+    <script>
+        let results = () => {
+            let gujarati = document.getElementById('gujarati').value,
+                english = document.getElementById('english').value,
+                hindi = document.getElementById('hindi').value,
+                ss = document.getElementById('ss').value,
+                science = document.getElementById('science').value
+            let total = +gujarati + +english + +hindi + +ss + +science;
+            let percentage = total / 5;
+
+            document.getElementById('totals').innerHTML = '<h3>Total Marks Obtained : ' + total + '</h3>';
+            document.getElementById('percentage').innerHTML = '<h3>Percentage Obtained : ' + percentage + '</h3>';
+
+            if (percentage >= 90) {
+                document.getElementById("grade").innerHTML = "<h3>Grade = A</h3>";
+                return false;
+            }
+            else if (percentage >= 80) {
+                document.getElementById("grade").innerHTML = "<h3>Grade = B</h3>";
+                return false;
+            }
+            else if (percentage >= 70) {
+                document.getElementById("grade").innerHTML = "<h3>Grade = C</h3>";
+                return false;
+            }
+            else if (percentage >= 50) {
+                document.getElementById("grade").innerHTML = "<h3>Grade = D</h3>";
+                return false;
+            }
+            else if (percentage >= 33) {
+                document.getElementById("grade").innerHTML = "<h3>Grade = E</h3>";
+                return false;
+            }
+            else {
+                document.getElementById("grade").innerHTML = "FAIL";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

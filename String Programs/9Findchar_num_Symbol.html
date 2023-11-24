@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt('Enter any value to count Vowel, Consonant, Digit, Special characters and White Space.');
+        let vowels = 0,
+            consonant = 0,
+            specialChar = 0,
+            whiteSpace = 0,
+            digit = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
+                str[i] = str[i].toLowerCase();
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                    vowels++;
+                }
+                else {
+                    consonant++;
+                }
+            }
+            else if (str[i] >= '0' && str[i] <= '9') {
+                digit++;
+            }
+            else if (str[i] == ' ') {
+                whiteSpace++;
+            }
+            else {
+                specialChar++;
+            }
+        }
+        document.write('Main String : ' + str + "<br>")
+        document.write("Vowels : " + vowels + "<br>");
+        document.write("Consonant : " + consonant + "<br>");
+        document.write("Digit : " + digit + "<br>");
+        document.write("Special Character : " + specialChar + "<br>");
+        document.write("White Space : " + whiteSpace + "<br>");
+    </script>
+</body>
+
+</html>
